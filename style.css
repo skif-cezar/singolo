@@ -72,11 +72,12 @@ header {
     list-style: none;
 }
 
-.header__navigation > ul > li > a {
+.header__navigation a:not(.current) {
     font-weight: bold;
     font-size: 12px;
     line-height: 68px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .header__navigation > ul > li > a:hover {
@@ -96,6 +97,22 @@ a {
     font-weight: 400;
     font-size: 19px;
     color: #494e62;
+}
+
+nav a.current {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 68px;
+    cursor: default;
+    color: #f06c64;
+}
+
+.slider, .services, .portfolio, .about__us {
+    scroll-margin-top: 89px;
+}
+
+.contact {
+    scroll-margin-top: 300px;
 }
 
 /*section slider*/
