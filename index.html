@@ -15,11 +15,11 @@
                 </h1>
                 <nav class="header__navigation">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -28,13 +28,15 @@
         <section class="slider">
             <div class="wrapper">
                 <img class="arrow__prev" src="assets/img/arrow-prev.png" alt="arrow prev">
-                <img class="phone__vertical" src="assets/img/phone-vertical.png" alt="iPhone vertical" height="483">
-                <img class="phone__horizontal" src="assets/img/phone-horizontal.png" alt="iPhone horizontal" height="240">
+                <div class="screen" id="screen-1"></div>
+                <img class="phone__vertical" id="phone__vertical" src="assets/img/phone-vertical.png" alt="iPhone vertical" height="483">
+                <div class="screen" id="screen-2"></div>
+                <img class="phone__horizontal" id="phone__horizontal" src="assets/img/phone-horizontal.png" alt="iPhone horizontal" height="240">
                 <img class="arrow__next" src="assets/img/arrow-next.png" alt="arrow next">
             </div>
         </section>
 
-        <section class="services">
+        <section class="services" id="services">
                 <article class="services__header">
                     <h2>Our Services</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -93,7 +95,7 @@
                 </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
                 eget lacinia odio sem nec elit.</p>
@@ -153,7 +155,7 @@
             </div>
         </section>
 
-        <section class="about__us">
+        <section class="about__us" id="about">
             <article class="about__us__header">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -222,7 +224,7 @@
             </p>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="content__form">
                 <form class="form" action="#" method="POST">
                     <input class="input__form" type="text" name="fname" required pattern="[a-zA-Zа-яА-ЯЁё\s]+"
@@ -258,5 +260,6 @@
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

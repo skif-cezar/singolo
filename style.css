@@ -14,6 +14,9 @@ body {
 /*header section*/
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
     width: 100%;
     height: 89px;
     text-transform: uppercase;
@@ -97,6 +100,31 @@ a {
 
 /*section slider*/
 
+.screen {
+    position: absolute;
+    cursor: pointer;
+}
+
+#screen-1 {
+    width: 188px;
+    height: 333px;
+    background-color: #0f0f0f;
+    margin-left: 86px;
+    margin-top: 118px;
+    display: none;
+    z-index: 2;
+}
+
+#screen-2 {
+    width: 333px;
+    height: 188px;
+    background-color: #0f0f0f;
+    margin-left: 445px;
+    margin-top: 188px;
+    display: none;
+    z-index: 2;
+}
+
 .slider {
     width: 100%;
     height: 594px;
@@ -123,13 +151,15 @@ img {
 .phone__vertical {
     position: absolute;
     margin-top: 53px;
-    margin-left: 72px
+    margin-left: 72px;
+    cursor: pointer;
 }
 
 .phone__horizontal {
     position: absolute;
     margin-top: 174px;
     margin-left: 385px;
+    cursor: pointer;
 }
 
 .arrow__next {
