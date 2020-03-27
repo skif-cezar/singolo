@@ -26,6 +26,35 @@ for (let anchor of anchors) {
 
 };
 
+document.addEventListener('scroll', onScroll);
+
+function onScroll(){
+    const pageHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    );
+    const curPos = window.scrollY;
+    const clientScreenHeight = document.documentElement.clientHeight;
+    const clientBottomPosition = clientScreenHeight + curPos;
+
+    document.querySelectorAll("#container > section").forEach((el) => {
+        if(el.offsetTop - 89 <= curPos &&
+        (el.offsetTop + el.offsetHeight - 89) > curPos){
+            menuLinks.forEach((a) => {
+                a.classList.remove("current");
+        if(clientBottomPosition + 185 >= pageHeight) {
+            menuLinks[menuLinks.length - 1].classList.add("current");
+        } else {
+            if (el.getAttribute("id") === a.getAttribute("href").substring(1)) {
+                a.classList.add("current");
+            }
+        }
+            })
+        }
+    })
+}
+
 /* vertical and horizontal iPhone */
 
 const phoneVertical = document.getElementById('phone__vertical');
