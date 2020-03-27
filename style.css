@@ -349,6 +349,18 @@ img {
     border-color: #c5c5c5;
 }
 
+.button__item:active {
+    cursor: default;
+    color: #dedede;
+    border-color: #c5c5c5;
+}
+
+.selected {
+    cursor: default;
+    color: #dedede;
+    border-color: #c5c5c5;
+}
+
 .portfolio__gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -358,6 +370,18 @@ img {
     margin-bottom: 47px;
 }
 
+@media (max-width: 768px) {
+   .portfolio__gallery {
+       grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
+@media (max-width: 375px) {
+    .portfolio__gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .area__img {
     display: block;
     width: 220px;
@@ -365,6 +389,24 @@ img {
     margin-left: 20px;
     margin-bottom: 20px;
     background-color: #464b5e;
+}
+
+.frame {
+    outline: 5px solid #F06C64;
+    outline-offset: -5px;
+}
+
+.frame:hover {
+    opacity: 1;
+}
+
+.area__img > img:hover {
+    opacity: 0.5;
+}
+
+.area__img > img {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 /*section about us*/

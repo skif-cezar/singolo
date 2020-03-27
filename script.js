@@ -82,3 +82,36 @@ phoneVertical.addEventListener('click', function(){
 phoneHorizontal.addEventListener('click', function(){
     clickAll(screen2);
 });
+
+/* portfolio */
+
+const tags = document.querySelectorAll(".container__buttons button");
+const portfolio = document.querySelector(".portfolio__gallery");
+
+tags.forEach(tag => tag.addEventListener("click", (event) => {
+    if( !event.target.classList.contains("selected") ) {
+    let portfolioPictures = [...portfolio.querySelectorAll(".area__img")];
+    portfolioPictures.unshift(portfolioPictures.pop());
+    portfolioPictures.forEach( pic => portfolio.append(pic) );
+    console.log(portfolioPictures);
+}
+tags.forEach(t => t.classList.remove('selected'));
+event.target.classList.add("selected");
+}));
+
+// frame around the picture
+let switchNow = true;
+const portfolioImg = portfolio.querySelectorAll(".area__img");
+portfolioImg.forEach(image => image.addEventListener("click", (event) => {
+    if ( event.target.classList.contains("frame") ) {
+    switchNow = false;
+}
+
+portfolio.querySelectorAll("img").forEach(pic => pic.classList.remove("frame"));
+
+if (switchNow) {
+    event.target.classList.add("frame");
+}
+
+switchNow = true;
+}));
