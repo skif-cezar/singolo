@@ -9,7 +9,7 @@
 <body>
     <div class="container" id="container">
         <header>
-            <div class="wrapper">
+            <div class="wrapper flex">
                 <h1 class="logo">
                     <a href="#" class="logo__name">singolo</a>
                 </h1>
@@ -27,16 +27,39 @@
 
         <section class="slider" id="home">
             <div class="wrapper">
-                <img class="arrow__prev" src="assets/img/arrow-prev.png" alt="arrow prev">
-                <div class="screen" id="screen-1"></div>
-                <img class="phone__vertical" id="phone__vertical" src="assets/img/phone-vertical.png" alt="iPhone vertical" height="483">
-                <div class="screen" id="screen-2"></div>
-                <img class="phone__horizontal" id="phone__horizontal" src="assets/img/phone-horizontal.png" alt="iPhone horizontal" height="240">
-                <img class="arrow__next" src="assets/img/arrow-next.png" alt="arrow next">
+                <div class="carousel">
+                    <div class="item-container">
+                        <div class="item active">
+                            <div class="description">
+                                <div class="screen" id="screen-1"></div>
+                                <img class="phone__vertical" id="phone__vertical" src="assets/img/phone-vertical.png" alt="iPhone vertical" height="483">
+                                <div class="screen" id="screen-2"></div>
+                                <img class="phone__horizontal" id="phone__horizontal" src="assets/img/phone-horizontal.png" alt="iPhone horizontal" height="240">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="description">
+                                <img class="iphones" src="assets/img/some-phones.png"
+                                     alt="vertical image of the 3 iPhone's" height="513">
+                            </div>
+                        </div>
+                        <div class="control left">
+                            <div class="arrow left">
+                                <img class="arrow__prev" src="assets/img/arrow-prev.png" alt="arrow prev">
+                            </div>
+                        </div>
+                        <div class="control right">
+                            <div class="arrow right">
+                                <img class="arrow__next" src="assets/img/arrow-next.png" alt="arrow next">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="services" id="services">
+            <div class="wrapper">
                 <article class="services__header">
                     <h2>Our Services</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -44,55 +67,56 @@
                         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 </article>
                 <div class="services__main">
-                    <div class="cell">
+                    <div class="icons">
                         <img class="services__icon" src="assets/img/pen.png" alt="pen">
+                    </div>
                         <div class="cell__main">
                             <h3>Custom Design</h3>
                             <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
                                 viverra lacus ut, ultrices velit.</p>
                         </div>
-                    </div>
-                    <div class="cell">
+                    <div class="icons">
                         <img class="services__icon" src="assets/img/bulb.png" alt="bulb">
+                    </div>
                         <div class="cell__main">
                             <h3>Inovative Ideas</h3>
                             <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus,
                                 nec rutrum tellus dolor id lorem.</p>
                         </div>
-                    </div>
-                    <div class="cell">
+                    <div class="icons">
                         <img class="services__icon" src="assets/img/heart.png" alt="heart">
+                    </div>
                         <div class="cell__main">
                             <h3>Love Is The Answer</h3>
                             <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
                                 et consequat felis. Quisque condimentum.</p>
                         </div>
-                    </div>
-                    <div class="cell">
+                    <div class="icons">
                         <img class="services__icon" src="assets/img/iPhone.png" alt="phone">
+                </div>
                         <div class="cell__main">
                             <h3>Responsive Layout</h3>
                             <p>Sed porttitor placerat rhoncus. In at nunc tellus.
                                 Maecenas blandit nunc ligula. Praesent elit leo.</p>
                         </div>
-                    </div>
-                    <div class="cell">
+                    <div class="icons">
                         <img class="services__icon" src="assets/img/bubble.png" alt="bubble">
+                </div>
                         <div class="cell__main">
                             <h3>24 / 7 Support</h3>
                             <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat.
                                 Pellentesque egestas venenatis lorem .</p>
                         </div>
-                    </div>
-                    <div class="cell">
+                    <div class="icons">
                         <img class="services__icon" src="assets/img/star.png" alt="star">
+                </div>
                         <div class="cell__main">
                             <h3>Feel Like A Star</h3>
                             <p>Quisque hendrerit purus dapibus, ornare nibh vitae,
                                 viverra nibh. Fusce vitae aliquam tellus.</p>
                         </div>
-                    </div>
                 </div>
+            </div>
         </section>
 
         <section class="portfolio" id="portfolio">
