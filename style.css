@@ -76,15 +76,8 @@ header {
     height: 100%;
     margin: 0 auto;
     padding: 0 40px;
-    max-width: 940px;
-
-    display: block;
-    justify-content: space-between;
     max-width: 1020px;
-    height: 100%;
-    padding: 0 40px;
     align-items: center;
-    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -115,6 +108,15 @@ header {
 
 /*navigation*/
 
+#menu a {
+    display: flex;
+    font-size: 24px;
+    font-family: "Lato";
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0 0 0 71px;
+}
+
 .header__navigation {
     width: 380px;
     height: 100%;
@@ -141,7 +143,7 @@ header {
 
 .navbar_head_mobile a:not(.current) {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 19px;
     line-height: 68px;
     color: #ffffff;
     cursor: pointer;
@@ -174,16 +176,12 @@ a {
     color: #494e62;
 }
 
-nav a.current {
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 68px;
-    cursor: default;
-    color: #f06c64;
+.slider, .services, .about__us {
+    scroll-margin-top: 89px;
 }
 
-.slider, .services, .portfolio, .about__us {
-    scroll-margin-top: 89px;
+.portfolio {
+    scroll-margin-top: 88px;
 }
 
 .contact {
@@ -705,6 +703,18 @@ img {
 }
 
 @media only screen and (max-width: 1019px) and (min-width: 768px){
+    .slider, .services, .about__us {
+        scroll-margin-top: 88px;
+    }
+
+    .portfolio {
+        scroll-margin-top: 88px;
+    }
+
+    .contact {
+        scroll-margin-top: 300px;
+    }
+
     .people {
         padding-top: 38px;
         grid-column-gap: 15px;
@@ -959,6 +969,11 @@ footer {
 }
 
 @media only screen and (max-width: 767px) and (min-width: 300px){
+
+    .contact {
+        scroll-margin-top: 350px;
+    }
+
     .form {
     max-width: 100%;
     }
@@ -1010,7 +1025,8 @@ footer {
     }
 
     #menu {
-        margin-top: 158px;
+        margin-top: 135px;
+        padding: 0;
         line-height: 1.15;
         letter-spacing: -1px;
         list-style: none;
@@ -1023,17 +1039,7 @@ footer {
     .navbar_head_mobile > .logo {
         margin: 0;
         margin-left: 80px;
-        margin-top: 18px;
-    }
-
-    #menu a {
-        display: flex;
-        font-size: 24px;
-        font-family: "Lato";
-        font-weight: 700;
-        text-decoration: none;
-        color: white;
-        padding: 30px 0 0 71px;
+        margin-top: 10px;
     }
 
     .wrapper.flex {

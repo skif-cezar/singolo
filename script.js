@@ -3,11 +3,42 @@
 
 const menu = document.querySelector("nav ul");
 const menuLinks = document.querySelectorAll("nav ul li a");
+const MENU = document.getElementById("menu");
+const BUTTON = document.getElementById("btn");
+const MENU_BTN = document.querySelector(".menu-btn");
+const CLOSE_BUTTON = document.getElementById("close-btn");
 
-menuLinks.forEach( link => link.addEventListener("click", (event) => {
-    menu.querySelectorAll('a').forEach(e => e.classList.remove('current'));
-event.target.classList.add("current");
-}));
+MENU_BTN.addEventListener('click', (e) => {
+    e.preventDefault();
+if (e.target.tagName === "A") {
+    if (e.target.classList[1] == 'active') {
+        e.target.classList.remove('active');
+        document.getElementById('burger-block').classList.add('hidden');
+    }
+    else {
+        e.target.classList.add('active');
+        document.getElementById('burger-block').classList.remove('hidden');
+    }
+}
+
+else {
+    if (e.target.parentElement.classList[1] == 'active') {
+        e.target.parentElement.classList.remove('active');
+        document.getElementById('burger-block').classList.add('hidden');
+    }
+    else {
+        e.target.parentElement.classList.add('active');
+        document.getElementById('burger-block').classList.remove('hidden');
+    }
+}
+});
+
+MENU.addEventListener('click', (event) => {
+    MENU.querySelectorAll('a').forEach(el => el.classList.remove('current'));
+    event.target.classList.add('current');
+    document.getElementById('burger-block').classList.add('hidden');
+    document.querySelector('.menu-btn').classList.remove('active');
+});
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -39,8 +70,8 @@ function onScroll(){
     const clientBottomPosition = clientScreenHeight + curPos;
 
     document.querySelectorAll("#container > section").forEach((el) => {
-        if(el.offsetTop - 89 <= curPos &&
-        (el.offsetTop + el.offsetHeight - 89) > curPos){
+        if(el.offsetTop - 91 <= curPos &&
+        (el.offsetTop + el.offsetHeight - 91) > curPos){
             menuLinks.forEach((a) => {
                 a.classList.remove("current");
         if(clientBottomPosition + 185 >= pageHeight) {
