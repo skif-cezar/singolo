@@ -1,16 +1,16 @@
 
 /* header */
 
-const menu = document.querySelector("nav ul");
-const menuLinks = document.querySelectorAll("nav ul li a");
-const MENU = document.getElementById("menu");
-const BUTTON = document.getElementById("btn");
-const MENU_BTN = document.querySelector(".menu-btn");
-const CLOSE_BUTTON = document.getElementById("close-btn");
+const menu = document.querySelector('nav ul');
+const menuLinks = document.querySelectorAll('nav ul li a');
+const MENU = document.getElementById('menu');
+const BUTTON = document.getElementById('btn');
+const MENU_BTN = document.querySelector('.menu-btn');
+const CLOSE_BUTTON = document.getElementById('close-btn');
 
 MENU_BTN.addEventListener('click', (e) => {
     e.preventDefault();
-if (e.target.tagName === "A") {
+if (e.target.tagName === 'A') {
     if (e.target.classList[1] == 'active') {
         e.target.classList.remove('active');
         document.getElementById('burger-block').classList.add('hidden');
@@ -69,16 +69,16 @@ function onScroll(){
     const clientScreenHeight = document.documentElement.clientHeight;
     const clientBottomPosition = clientScreenHeight + curPos;
 
-    document.querySelectorAll("#container > section").forEach((el) => {
+    document.querySelectorAll('#container > section').forEach((el) => {
         if(el.offsetTop - 91 <= curPos &&
         (el.offsetTop + el.offsetHeight - 91) > curPos){
             menuLinks.forEach((a) => {
-                a.classList.remove("current");
+                a.classList.remove('current');
         if(clientBottomPosition + 185 >= pageHeight) {
-            menuLinks[menuLinks.length - 1].classList.add("current");
+            menuLinks[menuLinks.length - 1].classList.add('current');
         } else {
-            if (el.getAttribute("id") === a.getAttribute("href").substring(1)) {
-                a.classList.add("current");
+            if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                a.classList.add('current');
             }
         }
             })
@@ -116,10 +116,10 @@ phoneHorizontal.addEventListener('click', function(){
 
 /* slider */
 
-let items = document.querySelectorAll(".item");
-let currentItem = 0;
-let isEnabled = true;
-let slider = document.getElementsByClassName("slider");
+var items = document.querySelectorAll('.carousel .item');
+var currentItem = 0;
+var isEnabled = true;
+var slider = document.getElementsByClassName('slider');
 
 function changeCurrentItem(n) {
     currentItem = (n + items.length) % items.length;
@@ -146,7 +146,7 @@ function previousItem(n) {
     hideItem('to-right');
     changeCurrentItem(n - 1);
     showItem('from-left');
-    if (slider[0].classList[1] == "blue") {
+    if (slider[0].classList[1] == 'blue') {
         slider[0].classList.remove('blue');
     }
     else { slider[0].classList.add('blue'); }
@@ -156,7 +156,7 @@ function nextItem(n) {
     hideItem('to-left');
     changeCurrentItem(n + 1);
     showItem('from-right');
-    if (slider[0].classList[1] == "blue") {
+    if (slider[0].classList[1] == 'blue') {
         slider[0].classList.remove('blue');
     }
     else { slider[0].classList.add('blue'); }
